@@ -1,15 +1,20 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 export default function NavAuth() {
     const navLinks = [
         { "name": "Register", href: "/register" },
         { "name": "Login", href: "/login" },
         { "name": "Forgot Password", href: "/forgot-password" },
     ]
+    
     const pathname = usePathname();
     return (
+
+        
         <nav>
+         
             <ul>
                 {
                     navLinks.map((link) => {
