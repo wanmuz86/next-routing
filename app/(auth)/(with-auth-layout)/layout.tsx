@@ -1,4 +1,6 @@
+"use client"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 export default function AuthLayout({
     children, // will be a page or nested layout
   }: {
@@ -9,14 +11,23 @@ export default function AuthLayout({
       {"name":"Login", href:"/login"},
       {"name":"Forgot Password", href:"/forgot-password"},
     ]
+    const pathname = usePathname();
     return (
       <div>
+        <p>Path name is {pathname}</p>
         <ul>
         {
           navLinks.map((link)=>{
             return (
               <li key={link.name}>
-                <Link href={link.href} >
+                <Link 
+                href={link.href} 
+                style={{
+                  color: pathname.startsWith(link.href) ?
+                  "green" 
+                  : "blue"
+                }}
+                >
                 {link.name}
               </Link>
                </li>
