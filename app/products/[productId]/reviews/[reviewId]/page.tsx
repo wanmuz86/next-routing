@@ -6,8 +6,7 @@ export default function ReviewDetail({
     <div>
         <h1>Review Detail</h1>
         <p>This is a review detail page
-            for review of id {params.reviewId}
-            and product {params.productId}
+            for review of id {params.reviewId} and product {params.productId}
         </p>
         </div>
   )
