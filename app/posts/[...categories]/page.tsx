@@ -6,6 +6,10 @@ export default function CategoryPosts(
             categories:string[]
         }
     }){
+        const random = Math.floor(Math.random() * 2)
+        if (random === 1){
+            throw new Error("Error loading categories");
+        }
 
   return (
     <div>
