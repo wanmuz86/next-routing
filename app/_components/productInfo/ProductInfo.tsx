@@ -19,6 +19,7 @@ const ProductInfo: React.FC<ProductProps> = ({ product })=> {
       {
         product.images.map(val=>(
         <Image
+        key={val}
         src={val}
         alt={product.title}
         width={400}
