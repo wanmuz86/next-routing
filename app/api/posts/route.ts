@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Post } from "@/app/_lib/models";
 
 export const GET = async (request:NextRequest) => {
 

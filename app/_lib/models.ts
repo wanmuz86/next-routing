@@ -70,8 +70,7 @@ Post.belongsTo(User, { foreignKey: 'userId' });
 sequelize.sync({ force: false }); // Set force to true to drop and recreate tables
 
 // Export the models
-module.exports = { User, Post };
-
+export { User, Post };
  
        
        
