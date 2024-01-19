@@ -8,9 +8,7 @@ const getData = async () => {
     return res.json();
 }
 const Post = async () => {
-    const posts = await getData();
-
-   
+const posts = await getData();
   return (
   <div>
         {
