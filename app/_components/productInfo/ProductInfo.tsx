@@ -1,7 +1,12 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-export default function ProductInfo({product}) {
+import { Product } from '@/app/_types/product'
+
+interface ProductProps  {
+    product:Product
+}
+const ProductInfo: React.FC<ProductProps> = ({ product })=> {
   return (
     <div>
         <h1>Product Detail</h1>
@@ -22,3 +27,4 @@ export default function ProductInfo({product}) {
     </div>
   )
 }
+export default ProductInfo;

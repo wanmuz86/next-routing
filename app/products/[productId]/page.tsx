@@ -4,7 +4,7 @@ import ProductInfo from '@/app/_components/productInfo/ProductInfo';
 import React from 'react'
 
 
-const getData = async(productId:string) =>{
+const getData = async(productId:string): Promise<Product> =>{
   const response = await fetch(`https://dummyjson.com/products/${productId}`)
   if (!response.ok){
     throw new Error('failed to fetch product')
@@ -18,6 +18,7 @@ const ProductDetail = async (
   const product = await getData(params.productId)
   return (
     <div>
+    
       <ProductInfo product={product}/>
     </div>
   )
