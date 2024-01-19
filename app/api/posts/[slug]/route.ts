@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server";
+import { NextResponse,NextRequest } from "next/server";
 import { Post } from '@/app/_lib/models';
 
-export const GET = async (request:NextResponse, {params}:{
+export const GET = async (request:NextRequest, {params}:{
     params : {
         slug:string
     }
