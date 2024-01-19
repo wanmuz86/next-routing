@@ -5,6 +5,10 @@ const nextConfig = {
         {
             protocol:'https',
             hostname:'anak2u.s3-ap-southeast-1.amazonaws.com'
+        },
+        {
+            protocol:'https',
+            hostname:'cdn.dummyjson.com'
         }
     ]
     }
