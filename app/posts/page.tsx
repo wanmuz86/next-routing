@@ -12,13 +12,14 @@ const Post = async () => {
 
    
   return (
-    <div>
+  <div>
         {
             posts.map(val=>(
                 <PostCard key={val.slug} post={val}/>  
             )
+            )
         }
-    </div>
+        </div>
   )
 }
 export default Post;
