@@ -20,7 +20,7 @@ export const getPosts = async () => {
 
 export const addPost = async (prevState, formData)=> {
     
-    const { title, desc, slug, userId } = Object.fromEntries(formData);
+    const { title, desc, slug, userId,img} = Object.fromEntries(formData);
 
     try {
         const newPost = new Post(
@@ -28,7 +28,8 @@ export const addPost = async (prevState, formData)=> {
                 title,
                 desc,
                 slug,
-                userId
+                userId,
+                img
             }
         );
         await newPost.save();
