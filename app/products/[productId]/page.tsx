@@ -1,16 +1,25 @@
 import { notFound } from 'next/navigation'
+import {Product} from '@/app/_types/product';
 import React from 'react'
 
-export default function ProductDetail(
-  { params }: { params: { productId: string } }
-) {
-  if (parseInt(params.productId) > 1000) {
-    notFound()
+
+const getData = async(productId:string) =>{
+  const response = await fetch(`https://dummyjson.com/products/${productId}`)
+  if (!response.ok){
+    throw new Error('failed to fetch product')
   }
+  return response.json()
+}
+const ProductDetail = async (
+  { params }: { params: { productId: string } }
+)  => {
+  const product = await getData(params.productId)
   return (
     <div>
       <h1>Product Detail</h1>
-      <p>This is product detail for {params.productId}</p>
+      <p>Id: {product.id}</p>
+      <p>Name: {product.title}</p>
     </div>
   )
 }
+export default ProductDetail;

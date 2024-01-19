@@ -1,11 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image';
+import {Product} from '@/app/_types/product';
 
-interface Product {
-  id:number,
-  title:string
-}
 
 const getData = async () => {
   const res = await fetch("https://dummyjson.com/products");
