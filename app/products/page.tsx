@@ -33,9 +33,9 @@ const Product = async () => {
       />
       <ul>
         {
-          products.map((val : Product) => {
+          products.products.map((val : Product) => {
             return (
-              <li>
+              <li key={val.id}>
                 <Link href={`products/${val.id}`}>
                   {val.title}
                 </Link></li>
