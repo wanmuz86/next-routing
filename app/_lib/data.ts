@@ -1,3 +1,9 @@
+// data.ts is all item that related to server
+// eg : connection data to get an item
+// formAction by client from a form
+// I need to specify that this file will forcely be in server
+
+"use server"
 import {Post} from '@/app/_lib/models'
 import { revalidatePath } from 'next/cache';
 

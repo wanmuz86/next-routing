@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { useFormState } from 'react-dom'
 import { addPost } from '@/app/_lib/data';
