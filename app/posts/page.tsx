@@ -1,6 +1,7 @@
 import React from 'react'
 import PostCard from '../_components/post_card/postCard';
-const getData = async () => {
+import { Post } from '../_types/post';
+const getData = async () : Promise<Array<Post>>=> {
     const res = await fetch("http://localhost:3000/api/posts");
     if (!res.ok){
         throw new Error("Something is wrong")
