@@ -4,7 +4,10 @@ import ProductInfo from '@/app/_components/productInfo/ProductInfo';
 import React from 'react'
 
 
-const getData = async(productId:string): Promise<Product> =>{
+// A promise -> an asynchronous type of function that will either return
+// success with or without Data
+// error
+const getData = async(productId:string): Promise<Product> => {
   const response = await fetch(`https://dummyjson.com/products/${productId}`)
   if (!response.ok){
     throw new Error('failed to fetch product')

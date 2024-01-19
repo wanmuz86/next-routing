@@ -6,6 +6,7 @@ import { Product } from '@/app/_types/product'
 interface ProductProps  {
     product:Product
 }
+
 const ProductInfo: React.FC<ProductProps> = ({ product })=> {
   return (
     <div>
